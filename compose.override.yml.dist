@@ -1,0 +1,23 @@
+version: "3"
+services:
+  database:
+    ports:
+      - 5432:5432
+    platform: linux/amd64
+    volumes:
+      - ./data/database:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: "directus"
+      POSTGRES_PASSWORD_FILE: "/run/secrets/database_password"
+      POSTGRES_DB: "directus"
+    secrets:
+      - database_password
+
+
+  directus:
+    volumes:
+      - ./uploads:/directus/uploads
+      - ./extensions:/directus/extensions
+    environment:
+      LOG_LEVEL: "debug"
+      PUBLIC_URL: "https://localhost:8055"
