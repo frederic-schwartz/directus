@@ -13,11 +13,9 @@ services:
     secrets:
       - database_password
 
-
   directus:
     volumes:
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
     environment:
       LOG_LEVEL: "debug"
-      PUBLIC_URL: "https://localhost:8055"

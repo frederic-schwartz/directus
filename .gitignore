@@ -2,6 +2,5 @@
 /caddy/.DS_Store
 /caddy/config
 /caddy/data
-/compose.override.yml
 /data
 /extensions
