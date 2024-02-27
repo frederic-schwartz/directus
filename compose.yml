@@ -44,7 +44,7 @@ services:
     environment:
       KEY: "255d861b-5ea1-5996-9aa3-922530ec40b1"
       SECRET_FILE: "/run/secrets/directus_secret_key"
-      LOG_LEVEL: "info"
+      LOG_LEVEL: "error"
 
       DB_CLIENT: "pg"
       DB_HOST: "database"
